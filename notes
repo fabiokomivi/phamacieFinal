@@ -1,0 +1,131 @@
+1. Contexte
+    Une pharmacie est un établissement ou un service dédié à la gestion,
+    la préparation et la distribution de médicaments et d'autres produits de santé destinés à prévenir,
+    traiter ou soulager les maladies et les affections humaines ou animales.
+    Elle joue un rôle clé dans le système de santé en assurant un accès sécurisé et contrôlé aux médicaments.
+
+2. Defis
+    dans l'accomplissement de ses fonctions elle est selon sa taille confrontée a certaines defis comme
+    - Les problemes liés au gestion de stock
+    - Le suivi des ventes
+    - La rapidité de satisfaction des clients
+
+3. Objectifs
+    notre objectif est la conception d'une application pour permettre
+
+    Assurer la disponibilité des médicaments :
+Garantir un stock suffisant et diversifié pour répondre aux besoins des clients en temps opportun.
+
+Offrir un service de santé de qualité :
+Conseiller les patients sur l'utilisation appropriée des médicaments et les bonnes pratiques pour améliorer leur santé.
+
+Gérer efficacement les stocks :
+Minimiser les pertes dues à l'expiration ou au surstockage tout en évitant les ruptures de produits essentiels.
+
+
+
+
+
+
+
+
+
+
+
+    1. Introduction
+
+Slide 1: Titre et Contexte
+
+    Nom de l’application.
+    Un slogan ou phrase clé (exemple : “Simplifier la gestion pharmaceutique”).
+    Contexte du projet (pourquoi cette application est importante).
+
+Slide 2: Problématique
+
+    Quels sont les défis rencontrés par les pharmacies aujourd’hui ?
+    (exemple : gestion des stocks, suivi des ventes, erreurs dans les prescriptions).
+    Objectifs de l’application :
+        Automatisation.
+        Réduction des erreurs.
+        Gain de temps et efficacité.
+
+2. Fonctionnalités Clés
+
+Slide 3: Gestion des Médicaments
+
+    Gestion des catégories de médicaments.
+    Suivi des stocks : alertes sur les seuils critiques, dates d’expiration.
+
+Slide 4: Gestion des Fournisseurs
+
+    Suivi des relations avec les fournisseurs.
+    Gestion des commandes de réapprovisionnement.
+
+Slide 5: Gestion des Clients et des Achats
+
+    Enregistrement des clients.
+    Historique des achats.
+    Intégration de divers modes de paiement.
+
+Slide 6: Reporting et Analyse
+
+    Statistiques sur les ventes (par médicament, période, etc.).
+    Tableaux de bord pour suivre les performances.
+
+3. Technologie Utilisée
+
+Slide 7: Architecture de l’Application
+
+    Langages : Java avec Jakarta Persistence (JPA).
+    Interface utilisateur : JavaFX.
+    Base de données : Hibernate ou autre système choisi.
+    Pourquoi ces choix technologiques ?
+
+Slide 8: Fonctionnement
+
+    Diagramme simple montrant le flux des données (client → application → base de données → retour au client).
+    Aperçu des relations entre les modules (catégories, médicaments, achats, fournisseurs).
+
+4. Démonstration Pratique
+
+Slide 9: Aperçu Visuel
+
+    Captures d’écran de l’application :
+        Interface utilisateur (gestion des stocks, ventes, etc.).
+        Exemple de tableau de bord ou rapport.
+
+Slide 10: Cas d’Utilisation
+
+    Scénario réaliste :
+        Un client achète un médicament → mise à jour automatique du stock → génération de la facture.
+
+5. Avantages et Valeur Ajoutée
+
+Slide 11: Points Forts
+
+    Simplicité et ergonomie de l’interface.
+    Réduction des erreurs humaines.
+    Gain de temps pour les pharmaciens.
+    Amélioration de la gestion des stocks et des commandes.
+
+Slide 12: Comparaison
+
+    Comparaison avec d’autres solutions ou méthode manuelle (exemple : gain de temps, précision).
+
+6. Conclusion et Prochaines Étapes
+
+Slide 13: Résumé
+
+    Pourquoi choisir votre application ?
+    Points clés abordés dans la présentation.
+
+Slide 14: Perspectives d’Évolution
+
+    Fonctionnalités futures :
+        Intégration avec des systèmes de prescriptions électroniques.
+        Application mobile pour accès rapide.
+    Support technique et maintenance continue.
+
+Slide 15: Questions et Réponses
+
+    Invitez les participants à poser des questions ou partager leurs idées.

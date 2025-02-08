@@ -1,0 +1,31 @@
+.root {
+    -fx-background-color: white;
+    -fx-border-color: #097909;
+    -fx-border-width: 2px 2px 2px 2px;
+
+}
+
+.submit-button {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #097909;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-text-fill: #097909;
+    -fx-font-weight: bold;
+
+}
+
+.submit-button:hover {
+    -fx-background-color: #097909; /* Bleu foncé */
+    -fx-cursor: hand; /* Change le curseur en main */
+    -fx-text-fill: white;
+
+}
+
+/* Style lorsque le bouton est enfoncé (pressed) */
+.submit-button:pressed {
+    -fx-background-color: #097909; /* Bleu foncé */
+    -fx-border-color: white; /* Bordure encore plus foncée */
+    -fx-text-fill: white;
+}

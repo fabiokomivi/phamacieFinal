@@ -1,0 +1,116 @@
+.svg {
+    -fx-stroke-width: 2px;         /* Épaisseur du contour */
+    -fx-stroke-linecap: round;     /* Style de l'extrémité du contour */
+    -fx-stroke-linejoin: round;    /* Style de l'angle du contour */
+    -fx-scale-x: 1; /* Échelle horizontale */
+    -fx-scale-y: 1; /* Échelle verticale */
+    -fx-stroke: white;    
+}
+
+.card {
+    -fx-background-color: #8fc886; /* Correction de l'orthographe */
+    -fx-border-color: #097909;
+    -fx-border-width: 2;
+    -fx-padding: 10;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.card:hover {
+    -fx-background-color: #8fc886;
+}
+
+.card.selected { /* Pas d'espace entre .card et .selected */
+    -fx-background-color: #8fc886;
+    -fx-border-color: #8fc886;
+}
+
+.card .label { /* Applique à tous les enfants lorsque .card est sélectionnée */
+    -fx-text-fill: black;
+}
+
+.card.selected .label { /* Applique à tous les enfants lorsque .card est sélectionnée */
+    -fx-text-fill: white;
+}
+
+.card.svg,
+.card * .svg {
+    -fx-stroke: white;             /* Couleur du contour */
+    -fx-fill: transparent;
+}
+
+.card.selected * .svg,
+.card.card.selected * .svg {
+    -fx-stroke: white;             /* Couleur du contour */
+    -fx-fill: transparent;
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-alignment: center_left;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #097909;
+    -fx-pref-width: 220px;
+    -fx-font-weight: bold;
+}
+
+.text-field .text {
+    -fx-fill: white; /* Couleur du texte du placeholder */
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-width: 3px;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-text-fill: white;
+}
+
+.red {
+    -fx-border-color: #b80a0a;
+    -fx-text-fill: #b80a0a;
+}
+
+.red:hover {
+    -fx-background-color: #b80a0a;
+    -fx-text-fill: white;
+}
+
+.green {
+    -fx-border-color: #1f721f;
+    -fx-text-fill: #1f721f;
+}
+
+.green:hover {
+    -fx-background-color: #1f721f;
+    -fx-text-fill: white;
+}
+
+.combo-box {
+    -fx-background-color: transparent;
+    -fx-alignment: center_left;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #097909;
+    -fx-pref-width: 220px;
+    -fx-font-weight: bold;
+}
+
+.tab {
+    -fx-border-color: #097909;
+    -fx-border-width:2px;
+    -fx-border-radius: 10px;
+
+}
+
+.close {
+    -fx-border-radius:60px;
+    -fx-background-radius: 60px;
+    -fx-background-color:red;
+    -fx-padding: 6px 5px 3px 5px
+}
+

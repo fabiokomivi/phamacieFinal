@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="637.0" spacing="10.0" styleClass="round" stylesheets="@../../CSS/createUpdate.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.pops.ClientChoose">
+   <children>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="554.0" text="choisir un client" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#onClose" prefHeight="25.0" prefWidth="28.0" styleClass="close">
+               <graphic>
+                  <SVGPath content="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16">
+                     <styleClass>
+                        <String fx:value="svg" />
+                        <String fx:value="svg-black" />
+                     </styleClass>
+                  </SVGPath>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label>
+                           <graphic>
+                              <SVGPath content="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" rotate="90.0">
+                                 <styleClass>
+                                    <String fx:value="svg-green" />
+                                    <String fx:value="svg-path" />
+                                 </styleClass>
+                              </SVGPath>
+                           </graphic>
+                        </Label>
+                        <TextField fx:id="searcher" onAction="#onSearch" prefHeight="24.0" prefWidth="274.0" />
+                     </children>
+                  </HBox>
+                  <VBox>
+                     <children>
+                        <HBox prefHeight="75.0" prefWidth="412.0">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="191.0" text="Nom" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="193.0" text="Contact" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="327.0" prefWidth="412.0">
+                           <content>
+                              <VBox fx:id="clientBox" prefHeight="200.0" prefWidth="100.0" spacing="2.0">
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="309.0" prefWidth="255.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <VBox>
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="102.0" text="nom" />
+                        <TextField fx:id="nameTF" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="102.0" text="contact" />
+                        <TextField fx:id="contactTF" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="102.0" text="email" />
+                        <TextField fx:id="emailTF" />
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#addClient" styleClass="action-button" text="ajouter">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#onValidate" styleClass="action-button" text="selectionner" />
+   </children>
+</VBox>

@@ -1,0 +1,162 @@
+.topbar {
+    -fx-background-color: #8fc886;
+}
+
+.svg-path {
+    -fx-fill: transparent;
+    -fx-stroke-width: 2px;         /* Épaisseur du contour */
+    -fx-stroke-linecap: round;     /* Style de l'extrémité du contour */
+    -fx-stroke-linejoin: round;    /* Style de l'angle du contour */
+    -fx-scale-x: 1; /* Échelle horizontale */
+    -fx-scale-y: 1; /* Échelle verticale */
+}
+
+.svg-white {
+    -fx-stroke: white; 
+}
+
+.svg-green {
+    -fx-stroke: #097909; 
+}
+
+.svg-red {
+    -fx-stroke: rgb(184, 10, 10); 
+}
+
+.svg-black {
+    -fx-stroke: black; 
+}
+
+.svg-black {
+    -fx-stroke: orange; 
+}
+
+/* Style général du DatePicker */
+.date-picker {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-border-color:  #8fc886;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-radius: 0px;
+}
+
+/* Style du popup du calendrier */
+.date-picker-popup {
+    -fx-background-color:  #8fc886;
+    -fx-border-color:  #8fc886;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+}
+
+
+.action-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-width: 3px;
+    -fx-font-weight: bold;
+}
+
+.action-button:hover {
+    -fx-text-fill: white;
+}
+
+.action-button:hover .svg-path {
+    -fx-stroke: white;
+}
+
+.red {
+    -fx-border-color: #b80a0a;
+    -fx-text-fill: #b80a0a;
+}
+
+.green {
+    -fx-border-color: #1f721f;
+    -fx-text-fill: #1f721f;
+
+}
+
+.orange {
+    -fx-border-color: orange;
+    -fx-text-fill: orange;
+}
+
+
+.red:hover {
+    -fx-background-color: #b80a0a;
+    -fx-border-color: #b80a0a;
+}
+
+.green:hover {
+    -fx-background-color: #1f721f;
+    -fx-border-color: #1f721f;
+}
+
+.orange:hover {
+    -fx-background-color: orange;
+    -fx-border-color: orange;
+}
+
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-alignment: center_left;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #097909;
+    -fx-pref-width: 220px;
+    -fx-font-weight: bold;
+}
+
+.title {
+    -fx-font-size: 33px;
+    -fx-text-fill: #8fc886;
+    -fx-font-weight:bold;
+}
+
+.toogle {
+    -fx-background-color: transparent;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-width: 3px;
+    -fx-font-weight: bold;
+    -fx-border-color: #1f721f;
+}
+
+.toogle .svg {
+    -fx-stroke: #1f721f;
+}
+
+.toogle:selected {
+    -fx-background-color: #1f721f;
+}
+
+.toogle:selected .svg {
+    -fx-stroke: white; 
+}
+
+.choice-box {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: #1f721f;
+}
+
+.scroll-pane {
+    -fx-background-color: #f4f7f6;  /* Fond légèrement gris clair */
+    
+    -fx-border-width: 2px;         /* Largeur de la bordure */
+    -fx-border-radius: 10px;       /* Coins arrondis */
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #ffffff; /* Fond blanc pour la zone de contenu */
+    -fx-background-insets: 0;      /* Suppression des marges */
+}
+
+.scroll-pane .thumb {
+    -fx-background-color: #4CAF50; /* Couleur verte pour la barre de défilement */
+}
+
+.scroll-pane .arrow-button {
+    -fx-background-color: #4CAF50; /* Couleur verte pour les boutons de direction */
+}

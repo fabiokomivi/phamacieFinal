@@ -1,0 +1,63 @@
+2. Repository
+
+Le Repository est responsable des opérations de base de données pour l'entité User en utilisant Hibernate avec JPA. Voici un exemple de UserRepository :
+
+// src/main/java/com/pharmacie/repositories/UserRepository.java
+package com.pharmacie.repositories;
+
+import com.pharmacie.models.User;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import java.util.Optional;
+
+public class UserRepository {
+
+    private final SessionFactory sessionFactory;
+
+    public UserRepository(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
+    public Optional<User> findById(int id) {
+        try (Session session = sessionFactory.openSession()) {
+            return Optional.ofNullable(session.get(User.class, id));
+        }
+    }
+
+    public Optional<User> findByUsername(String username) {
+        try (Session session = sessionFactory.openSession()) {
+            Query<User> query = session.createQuery("FROM User WHERE username = :username", User.class);
+            query.setParameter("username", username);
+            return query.uniqueResultOptional();
+        }
+    }
+
+    public User save(User user) {
+        try (Session session = sessionFactory.openSession()) {
+            Transaction transaction = session.beginTransaction();
+            session.saveOrUpdate(user);
+            transaction.commit();
+            return user;
+        }
+    }
+
+    public void delete(int id) {
+        try (Session session = sessionFactory.openSession()) {
+            Transaction transaction = session.beginTransaction();
+            User user = session.get(User.class, id);
+            if (user != null) {
+                session.delete(user);
+            }
+            transaction.commit();
+        }
+    }
+}
+
+Explications sur le UserRepository :
+
+    SessionFactory : Hibernate nécessite un SessionFactory pour ouvrir des sessions de base de données. Vous devez configurer un SessionFactory via votre configuration Hibernate (comme hibernate.cfg.xml ou Persistence).
+    findById, findByUsername, save, delete : Ces méthodes permettent de récupérer, sauvegarder et supprimer un utilisateur en utilisant des transactions Hibernate.
+    Transaction : Les transactions sont nécessaires pour assurer la cohérence des opérations (sauvegarde, mise à jour, suppression).

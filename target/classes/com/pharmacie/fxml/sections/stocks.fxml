@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" prefHeight="435.0" prefWidth="860.0" spacing="5.0" stylesheets="@../../CSS/allfield.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.sections.StockFx">
+   <children>
+      <Label maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="663.0" style="-fx-font-weight: bold;" styleClass="title" text="Stock" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="33.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <AnchorPane prefWidth="860.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="15.0" layoutY="7.0" spacing="5.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#addStock" prefHeight="35.0" text="ajouter">
+                     <graphic>
+                        <SVGPath content="M8 12H12M12 12H16M12 12V16M12 12V8M4 16.8002V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4801 4 18.9079 4.21799C19.2842 4.40973 19.5905 4.71547 19.7822 5.0918C20.0002 5.51962 20.0002 6.07967 20.0002 7.19978V16.7998C20.0002 17.9199 20.0002 18.48 19.7822 18.9078C19.5905 19.2841 19.2842 19.5905 18.9079 19.7822C18.4805 20 17.9215 20 16.8036 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2842 4.21799 18.9079C4 18.4801 4 17.9203 4 16.8002Z">
+                           <styleClass>
+                              <String fx:value="svg-path" />
+                              <String fx:value="svg-green" />
+                           </styleClass>
+                        </SVGPath>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="green" />
+                        <String fx:value="action-button" />
+                     </styleClass>
+                  </Button>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#removeStock" text="supprimer">
+                     <graphic>
+                        <SVGPath content="M14 10V17M10 10V17M6 6V17.8C6 18.9201 6 19.4798 6.21799 19.9076C6.40973 20.2839 6.71547 20.5905 7.0918 20.7822C7.5192 21 8.07899 21 9.19691 21H14.8031C15.921 21 16.48 21 16.9074 20.7822C17.2837 20.5905 17.5905 20.2839 17.7822 19.9076C18 19.4802 18 18.921 18 17.8031V6M6 6H8M6 6H4M8 6H16M8 6C8 5.06812 8 4.60241 8.15224 4.23486C8.35523 3.74481 8.74432 3.35523 9.23438 3.15224C9.60192 3 10.0681 3 11 3H13C13.9319 3 14.3978 3 14.7654 3.15224C15.2554 3.35523 15.6447 3.74481 15.8477 4.23486C15.9999 4.6024 16 5.06812 16 6M16 6H18M18 6H20">
+                           <styleClass>
+                              <String fx:value="svg-path" />
+                              <String fx:value="svg-red" />
+                           </styleClass>
+                        </SVGPath>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="action-button" />
+                        <String fx:value="red" />
+                     </styleClass>
+                  </Button>
+                  <Separator maxHeight="-Infinity" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="30.0" style="-fx-background-color: green; -fx-border-color: green;" />
+                  <ToggleButton fx:id="multipleSelector" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onMultipleSelection" prefHeight="35.0" styleClass="toogle">
+                     <graphic>
+                        <SVGPath content="M11 17H20M8 15L5.5 18L4 17M11 12H20M8 10L5.5 13L4 12M11 7H20M8 5L5.5 8L4 7">
+                           <styleClass>
+                              <String fx:value="svg-path" />
+                              <String fx:value="svg" />
+                           </styleClass>
+                        </SVGPath>
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="466.0" layoutY="9.0" spacing="5.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <SVGPath content="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" rotate="90.0">
+                     <styleClass>
+                        <String fx:value="svg-path" />
+                        <String fx:value="svg-green" />
+                     </styleClass>
+                  </SVGPath>
+                  <TextField fx:id="searcher" maxHeight="-Infinity" prefHeight="30.0" prefWidth="196.0" promptText="recherche" styleClass="textfield" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </AnchorPane>
+      <StackPane />
+      <HBox spacing="3.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="319.0" prefWidth="280.0" HBox.hgrow="SOMETIMES">
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+               <content>
+                  <VBox fx:id="medicinesBox" prefHeight="200.0" prefWidth="100.0" spacing="3.0" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="319.0" prefWidth="576.0" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="stockBox" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="3.0" />
+               </content>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

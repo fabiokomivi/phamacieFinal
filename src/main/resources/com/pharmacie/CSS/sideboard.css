@@ -1,0 +1,84 @@
+.bg {
+    -fx-background-color: white;
+    -fx-background-radius: 20px 0px 0px 20px;
+}
+
+.sideboard {
+    -fx-background-color: #8fc886;
+    -fx-background-radius: 0px;
+}
+
+.topbar {
+    -fx-background-color: #a5faa3;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-border: 0px;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-alignment: none;
+    -fx-padding: 0 0 0 20px;
+    -fx-font-weight: bold;
+}
+
+/*.selected {
+    -fx-border-width: 0px 0px 0px 5px;
+    -fx-border-color: rgb(0, 0, 0);
+    -fx-text-fill: rgb(0, 0, 0);
+}*/
+
+.selected{
+    -fx-content: "";
+    -fx-position: absolute;
+    -fx-right: 0;
+    -fx-top: -50px;
+    -fx-width: 50px;
+    -fx-height: 50px;
+    -fx-background-color: transparent;
+    -fx-border-radius: 50%;
+    -fx-box-shadow: 35px 35px 0 10px white;
+    -fx-pointer-events: none;
+}
+
+.svg-path {
+    -fx-stroke: white;             /* Couleur du contour */
+    -fx-fill: transparent;
+    -fx-stroke-width: 2px;         /* Épaisseur du contour */
+    -fx-stroke-linecap: round;     /* Style de l'extrémité du contour */
+    -fx-stroke-linejoin: round;    /* Style de l'angle du contour */
+    -fx-scale-x: 1.5; /* Échelle horizontale */
+    -fx-scale-y: 1.5; /* Échelle verticale */
+}
+
+.selected .svg-path {
+    -fx-stroke: rgb(0, 0, 0);
+}
+
+.nav-button:hover {
+    -fx-text-fill: rgb(0, 0, 0);
+}
+
+.nav-button:hover .svg-path{
+    -fx-stroke: rgb(0, 0, 0);
+}
+
+
+.scroll-pane {
+    -fx-background-color: #f4f7f6;  /* Fond légèrement gris clair */
+    
+    -fx-border-width: 2px;         /* Largeur de la bordure */
+    -fx-border-radius: 10px;       /* Coins arrondis */
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #ffffff; /* Fond blanc pour la zone de contenu */
+    -fx-background-insets: 0;      /* Suppression des marges */
+}
+
+.scroll-pane .thumb {
+    -fx-background-color: #4CAF50; /* Couleur verte pour la barre de défilement */
+}
+
+.scroll-pane .arrow-button {
+    -fx-background-color: #4CAF50; /* Couleur verte pour les boutons de direction */
+}

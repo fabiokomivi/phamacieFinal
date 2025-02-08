@@ -1,0 +1,55 @@
+4. Controller
+
+Le Controller gère les requêtes HTTP et utilise le UserService pour interagir avec la logique métier.
+
+// src/main/java/com/pharmacie/controllers/UserController.java
+package com.pharmacie.controllers;
+
+import com.pharmacie.models.User;
+import com.pharmacie.services.UserService;
+
+import java.util.Optional;
+
+public class UserController {
+
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    // Récupérer un utilisateur par son ID
+    public Optional<User> getUserById(int id) {
+        return userService.getUserById(id);
+    }
+
+    // Récupérer un utilisateur par son nom d'utilisateur
+    public Optional<User> getUserByUsername(String username) {
+        return userService.getUserByUsername(username);
+    }
+
+    // Créer un nouvel utilisateur
+    public User createUser(User user) {
+        return userService.createUser(user);
+    }
+
+    // Mettre à jour un utilisateur
+    public User updateUser(User user) {
+        return userService.updateUser(user);
+    }
+
+    // Supprimer un utilisateur
+    public void deleteUser(int id) {
+        userService.deleteUser(id);
+    }
+}
+
+Résumé
+
+    Entité User : C'est la classe principale qui sera mappée à la table users dans la base de données.
+    UserRepository : Fournit des méthodes pour interagir avec la base de données (CRUD) en utilisant Hibernate.
+    UserService : Contient la logique métier pour manipuler les utilisateurs.
+    UserController : Gère les demandes du contrôleur (par exemple, API REST ou autres points d'entrée).
+    Fichier de configuration Hibernate : Nécessaire pour que Hibernate puisse se connecter à la base de données PostgreSQL et gérer la persistance des entités.
+
+Cela devrait vous fournir une implémentation complète du modèle User avec Hibernate et la configuration nécessaire.

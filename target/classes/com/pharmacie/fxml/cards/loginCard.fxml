@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="card" maxWidth="1.7976931348623157E308" prefWidth="200.0" stylesheets="@../../CSS/card.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.cards.LoginCard">
+   <children>
+      <Label fx:id="start" maxWidth="1.7976931348623157E308" prefWidth="70.0" styleClass="bar-title" text="debut" HBox.hgrow="ALWAYS">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets left="4.0" />
+         </padding>
+      </Label>
+      <Label fx:id="end" maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="70.0" styleClass="bar-title" text="fin" HBox.hgrow="ALWAYS">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <styleClass>
+      <String fx:value="card" />
+      <String fx:value="small" />
+   </styleClass>
+</HBox>

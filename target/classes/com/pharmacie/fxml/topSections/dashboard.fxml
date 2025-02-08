@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="860.0" stylesheets="@../../CSS/dashbord.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.topSections.Dashboard">
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="860.0" spacing="5.0">
+         <children>
+            <AnchorPane maxHeight="50.0" minHeight="50.0" prefHeight="17.0" prefWidth="801.0" styleClass="topbar" stylesheets="@../../CSS/dashbord.css">
+               <children>
+                  <HBox alignment="CENTER" layoutX="579.0" layoutY="3.0" maxHeight="55.0" minHeight="44.0" prefHeight="50.0" prefWidth="291.0" spacing="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/user_connect.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="50.0" prefWidth="215.0">
+                           <children>
+                              <Label fx:id="nameTop" prefHeight="29.0" prefWidth="200.0" styleClass="name" text="amouzou-edah fabio" />
+                              <Label fx:id="emailTop" prefHeight="16.0" prefWidth="212.0" styleClass="email" text="amouzoufabio@gmail.com" />
+                           </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#onNavButtonSelected" prefHeight="50.0" prefWidth="63.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <SVGPath content="M12 15L15 12M15 12L12 9M15 12H4M4 7.24802V7.2002C4 6.08009 4 5.51962 4.21799 5.0918C4.40973 4.71547 4.71547 4.40973 5.0918 4.21799C5.51962 4 6.08009 4 7.2002 4H16.8002C17.9203 4 18.4796 4 18.9074 4.21799C19.2837 4.40973 19.5905 4.71547 19.7822 5.0918C20 5.5192 20 6.07899 20 7.19691V16.8036C20 17.9215 20 18.4805 19.7822 18.9079C19.5905 19.2842 19.2837 19.5905 18.9074 19.7822C18.48 20 17.921 20 16.8031 20H7.19691C6.07899 20 5.5192 20 5.0918 19.7822C4.71547 19.5905 4.40973 19.2839 4.21799 18.9076C4 18.4798 4 17.9201 4 16.8V16.75">
+                                 <styleClass>
+                                    <String fx:value="svg-path" />
+                                    <String fx:value="svg-white" />
+                                 </styleClass></SVGPath>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="51.0" prefWidth="860.0" spacing="10.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="39.0" prefWidth="143.0" styleClass="bienvenu" text="Bienvenu ">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="-3.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="welcomeName" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="34.0" prefWidth="688.0" styleClass="name" text="Amouzou-edah Fabio" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="238.0" prefWidth="860.0" spacing="20.0">
+               <children>
+                  <StackPane maxWidth="1.7976931348623157E308" prefHeight="215.0" prefWidth="268.0" styleClass="graphic-anchor" HBox.hgrow="SOMETIMES">
+                     <children>
+                        <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                           <children>
+                              <HBox maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="246.0">
+                                 <children>
+                                    <Label fx:id="week1" alignment="BOTTOM_LEFT" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="236.0" styleClass="bar-title" text="Cette semaine" HBox.hgrow="ALWAYS" />
+                                    <SVGPath content="M9 11V20M9 11H4.59961C4.03956 11 3.75981 11 3.5459 11.109C3.35774 11.2049 3.20487 11.3577 3.10899 11.5459C3 11.7598 3 12.04 3 12.6001V20H9M9 11V5.6001C9 5.04004 9 4.75981 9.10899 4.5459C9.20487 4.35774 9.35774 4.20487 9.5459 4.10899C9.75981 4 10.0396 4 10.5996 4H13.3996C13.9597 4 14.2403 4 14.4542 4.10899C14.6423 4.20487 14.7948 4.35774 14.8906 4.5459C14.9996 4.75981 15 5.04005 15 5.6001V8M9 20H15M15 20L21 20.0001V9.6001C21 9.04005 20.9996 8.75981 20.8906 8.5459C20.7948 8.35774 20.6429 8.20487 20.4548 8.10899C20.2409 8 19.9601 8 19.4 8H15M15 20V8" HBox.hgrow="ALWAYS">
+                                       <styleClass>
+                                          <String fx:value="svg-path" />
+                                          <String fx:value="svg-black" />
+                                       </styleClass>
+                                    </SVGPath>
+                                 </children>
+                              </HBox>
+                              <BarChart fx:id="purchaseTotalChart">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="yAxis" side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </StackPane>
+                  <StackPane prefHeight="215.0" prefWidth="268.0" styleClass="graphic-anchor">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="7.0">
+                           <children>
+                              <HBox maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label fx:id="week2" alignment="BOTTOM_LEFT" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="308.0" styleClass="bar-title" text="Cette semaine" HBox.hgrow="ALWAYS" />
+                                    <SVGPath content="M20.0005 7L14.1543 12.9375C14.0493 13.0441 13.9962 13.0976 13.9492 13.1396C13.1899 13.8193 12.0416 13.8193 11.2822 13.1396C11.2352 13.0976 11.1817 13.0442 11.0767 12.9375C10.9716 12.8308 10.9191 12.7774 10.8721 12.7354C10.1127 12.0557 8.96397 12.0557 8.20461 12.7354C8.15771 12.7773 8.10532 12.8305 8.00078 12.9367L4 17M20.0005 7L20 13M20.0005 7H14">
+                                       <styleClass>
+                                          <String fx:value="svg-path" />
+                                          <String fx:value="svg-black" />
+                                       </styleClass>
+                                    </SVGPath>
+                                 </children>
+                              </HBox>
+                              <AreaChart fx:id="purchaseNumberChart">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </AreaChart>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </StackPane>
+                  <StackPane prefHeight="215.0" prefWidth="268.0" styleClass="graphic-anchor">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="308.0" styleClass="bar-title" text="Aujourd'hui" />
+                              <VBox alignment="CENTER" prefHeight="189.0" prefWidth="247.0" spacing="30.0">
+                                 <children>
+                                    <VBox style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+                                       <children>
+                                          <Label prefHeight="36.0" prefWidth="253.0" style="-fx-font-weight: bold; -fx-font-size: 15px;" text="commandes validées">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox>
+                                             <children>
+                                                <Label fx:id="nbValidatePurchase" prefHeight="25.0" prefWidth="87.0" style="-fx-text-fill: green; -fx-font-weight: bold;" text="0">
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </Label>
+                                                <Label fx:id="totalValidatePurchase" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="161.0" style="-fx-text-fill: green; -fx-font-weight: bold;" text="0">
+                                                   <HBox.margin>
+                                                      <Insets right="4.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox style="-fx-background-color: white; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+                                       <children>
+                                          <Label prefHeight="36.0" prefWidth="253.0" style="-fx-font-weight: bold; -fx-font-size: 15px;" text="commandes en attentes">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox>
+                                             <children>
+                                                <Label fx:id="nbWaitingPurshase" prefHeight="25.0" prefWidth="87.0" style="-fx-font-weight: bold; -fx-text-fill: red;" text="0">
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </Label>
+                                                <Label fx:id="totalWaitingPurchase" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="161.0" style="-fx-font-weight: bold; -fx-text-fill: red;" text="0">
+                                                   <HBox.margin>
+                                                      <Insets right="4.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox maxHeight="1.7976931348623157E308" prefHeight="297.0" prefWidth="860.0" spacing="2.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" prefHeight="287.0" prefWidth="430.0" styleClass="graphic-anchor" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="434.0" styleClass="bar-title" text="Commande valides recentes" HBox.hgrow="ALWAYS" />
+                              <Label fx:id="nbRecentValidate" prefHeight="16.0" prefWidth="150.0" text="25" HBox.hgrow="NEVER" />
+                           </children>
+                        </HBox>
+                        <ScrollPane fx:id="recentValidated" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="272.0" prefWidth="430.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox fx:id="validatePurchaseBox" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="286.0" prefWidth="408.0" spacing="5.0">
+                                 <children>
+                                    <HBox maxWidth="1.7976931348623157E308" prefHeight="34.0" prefWidth="408.0">
+                                       <children>
+                                          <Label prefHeight="39.0" prefWidth="42.0">
+                                             <graphic>
+                                                <SVGPath content="M15 19C15 16.7909 12.3137 15 9 15C5.68629 15 3 16.7909 3 19M21 10L17 14L15 12M9 12C6.79086 12 5 10.2091 5 8C5 5.79086 6.79086 4 9 4C11.2091 4 13 5.79086 13 8C13 10.2091 11.2091 12 9 12Z">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-green" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label maxWidth="1.7976931348623157E308" prefHeight="43.0" prefWidth="144.0" text="sawadogo Aboul" HBox.hgrow="ALWAYS" />
+                                          <Label prefHeight="34.0" prefWidth="44.0" text="17:30" />
+                                          <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="101.0" text="1250 FCFA" />
+                                       </children>
+                                    </HBox>
+                                    <HBox maxWidth="1.7976931348623157E308" prefHeight="34.0" prefWidth="408.0">
+                                       <children>
+                                          <Label prefHeight="39.0" prefWidth="42.0">
+                                             <graphic>
+                                                <SVGPath content="M15 19C15 16.7909 12.3137 15 9 15C5.68629 15 3 16.7909 3 19M21 10L17 14L15 12M9 12C6.79086 12 5 10.2091 5 8C5 5.79086 6.79086 4 9 4C11.2091 4 13 5.79086 13 8C13 10.2091 11.2091 12 9 12Z">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-green" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label maxWidth="1.7976931348623157E308" prefHeight="43.0" prefWidth="144.0" text="inconnu" HBox.hgrow="ALWAYS" />
+                                          <Label prefHeight="34.0" prefWidth="44.0" text="17:30" />
+                                          <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="101.0" text="1250 FCFA" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                     </padding>
+                  </VBox>
+                  <VBox maxHeight="1.7976931348623157E308" prefHeight="287.0" prefWidth="430.0" styleClass="graphic-anchor" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="434.0" styleClass="bar-title" text="Commande en attentes recentes" HBox.hgrow="ALWAYS" />
+                              <Label fx:id="nbRecentWaiting" prefHeight="24.0" prefWidth="150.0" text="25" HBox.hgrow="NEVER" />
+                           </children>
+                        </HBox>
+                        <ScrollPane fx:id="recentWaiting" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="272.0" prefWidth="430.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox fx:id="waitingPurchaseBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="286.0" prefWidth="398.0" spacing="5.0">
+                                 <children>
+                                    <HBox prefHeight="34.0" prefWidth="408.0">
+                                       <children>
+                                          <Label prefHeight="39.0" prefWidth="42.0">
+                                             <graphic>
+                                                <SVGPath content="M15 19C15 16.7909 12.3137 15 9 15C5.68629 15 3 16.7909 3 19M17 14L19 12M19 12L21 10M19 12L17 10M19 12L21 14M9 12C6.79086 12 5 10.2091 5 8C5 5.79086 6.79086 4 9 4C11.2091 4 13 5.79086 13 8C13 10.2091 11.2091 12 9 12Z">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-red" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label maxWidth="1.7976931348623157E308" prefHeight="43.0" prefWidth="144.0" text="sawadogo Aboul" HBox.hgrow="ALWAYS" />
+                                          <Label prefHeight="34.0" prefWidth="44.0" text="17:30" />
+                                          <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="101.0" text="1250 FCFA" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="34.0" prefWidth="408.0">
+                                       <children>
+                                          <Label prefHeight="39.0" prefWidth="42.0">
+                                             <graphic>
+                                                <SVGPath content="M15 19C15 16.7909 12.3137 15 9 15C5.68629 15 3 16.7909 3 19M17 14L19 12M19 12L21 10M19 12L17 10M19 12L21 14M9 12C6.79086 12 5 10.2091 5 8C5 5.79086 6.79086 4 9 4C11.2091 4 13 5.79086 13 8C13 10.2091 11.2091 12 9 12Z">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-red" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label maxWidth="1.7976931348623157E308" prefHeight="43.0" prefWidth="144.0" text="sawadogo Aboul" HBox.hgrow="ALWAYS" />
+                                          <Label prefHeight="34.0" prefWidth="44.0" text="17:30" />
+                                          <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="101.0" text="1250 FCFA" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

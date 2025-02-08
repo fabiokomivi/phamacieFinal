@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="card" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="card" stylesheets="@../../CSS/card.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.cards.CategoryCardFx">
+   <children>
+      <ImageView fitHeight="163.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/category.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="categoryName" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="160.0" text="nom de la categorie">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER" prefWidth="200.0">
+         <children>
+            <VBox prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="41.0" prefWidth="100.0">
+                     <graphic>
+                        <SVGPath content="M21 19.9999C21 18.2583 19.3304 16.7767 17 16.2275M15 20C15 17.7909 12.3137 16 9 16C5.68629 16 3 17.7909 3 20M15 13C17.2091 13 19 11.2091 19 9C19 6.79086 17.2091 5 15 5M9 13C6.79086 13 5 11.2091 5 9C5 6.79086 6.79086 5 9 5C11.2091 5 13 6.79086 13 9C13 11.2091 11.2091 13 9 13Z" styleClass="svg" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="suppliersNumber" alignment="CENTER" prefHeight="24.0" prefWidth="108.0" text="78" />
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="51.0" prefWidth="1.0" />
+            <VBox prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="41.0" prefWidth="100.0">
+                     <graphic>
+                        <SVGPath content="M12.7435 8.82073L7.00896 11.3939C4.20961 12.65 2.95858 15.9376 4.2147 18.737C5.47081 21.5363 8.75841 22.7874 11.5578 21.5312L17.2923 18.9581M12.7435 8.82073L18.478 6.24754C21.2774 4.99143 24.565 6.24246 25.8211 9.0418C27.0772 11.8411 25.8262 15.1287 23.0268 16.3849L17.2923 18.9581M12.7435 8.82073L17.2923 18.9581" styleClass="svg" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="medecinesNumber" alignment="CENTER" prefHeight="24.0" prefWidth="108.0" text="52" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+</VBox>

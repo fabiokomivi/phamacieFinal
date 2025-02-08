@@ -1,0 +1,22 @@
+.card {
+    -fx-background-color: transparent; /* Correction de l'orthographe */
+    -fx-padding: 10;
+    -fx-border-color: #8fc886;
+    -fx-border-width: 1;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.card:hover {
+    -fx-background-color: #8fc886;
+}
+
+.card.selected { /* Pas d'espace entre .card et .selected */
+    -fx-background-color: #8fc886;
+    -fx-border-color: #8fc886;
+}
+
+.card.selected * { /* Applique à tous les enfants lorsque .card est sélectionnée */
+    -fx-text-fill: white;
+}

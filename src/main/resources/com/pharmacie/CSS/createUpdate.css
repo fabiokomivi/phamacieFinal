@@ -1,0 +1,121 @@
+.round {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-background-color: #8fc886;
+    -fx-padding: 6px 6px 6px 6px;
+    -fx-border-color: #097909;
+    -fx-border-width: 2;
+}
+
+.close {
+    -fx-border-radius:60px;
+    -fx-background-radius: 60px;
+    -fx-background-color:red;
+    -fx-padding: 6px 5px 3px 5px
+}
+
+.svg-path {
+    -fx-fill: transparent;
+    -fx-stroke-width: 2px;         /* Épaisseur du contour */
+    -fx-stroke-linecap: round;     /* Style de l'extrémité du contour */
+    -fx-stroke-linejoin: round;    /* Style de l'angle du contour */
+    -fx-scale-x: 1.2; /* Échelle horizontale */
+    -fx-scale-y: 1.2; /* Échelle verticale */
+}
+
+.svg-white {
+    -fx-stroke: white; 
+}
+
+.svg-green {
+    -fx-stroke: green; 
+}
+
+.svg-red {
+    -fx-stroke: rgb(184, 10, 10); 
+}
+
+.svg-black {
+    -fx-stroke: black; 
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-alignment: center_left;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #097909;
+    -fx-pref-width: 220px;
+    -fx-font-weight: bold;
+}
+
+.text-area {
+    -fx-background-color: transparent;
+    -fx-alignment: center_left;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-color: #097909;
+    -fx-pref-width: 220px;
+    -fx-font-weight: bold;
+}
+
+.action-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-width: 3px;
+    -fx-font-weight: bold;
+    -fx-border-color: #1f721f;
+    -fx-text-fill: #1f721f;
+    -fx-margin: 7px 0 0 0 
+}
+.action-button:hover {
+    -fx-background-color: #1f721f;
+    -fx-text-fill: white;
+}
+
+.date-picker{
+    -fx-background-color: transparent;
+}
+
+/* Appliquer un style personnalisé au bouton du DatePicker */
+.date-picker .arrow-button {
+    -fx-background-color: linear-gradient(to bottom, #4CAF50, #2E7D32); /* Dégradé vert */
+    -fx-background-radius: 5; /* Coins arrondis */
+    -fx-padding: 5; /* Espacement interne */
+    -fx-border-color: #1B5E20; /* Bordure verte foncée */
+    -fx-border-radius: 5; /* Bordure arrondie */
+    -fx-cursor: hand; /* Curseur au survol */
+}
+
+/* Ajouter un effet au survol du bouton */
+.date-picker .arrow-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #66BB6A, #388E3C); /* Dégradé plus clair */
+}
+
+/* Ajouter un effet lorsque le bouton est pressé */
+.date-picker .arrow-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #1B5E20, #4CAF50); /* Dégradé inversé */
+}
+
+.scroll-pane {
+    -fx-background-color: #f4f7f6;  /* Fond légèrement gris clair */
+    
+    -fx-border-width: 2px;         /* Largeur de la bordure */
+    -fx-border-radius: 10px;       /* Coins arrondis */
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #ffffff; /* Fond blanc pour la zone de contenu */
+    -fx-background-insets: 0;      /* Suppression des marges */
+}
+
+.scroll-pane .content {
+    -fx-padding: 10px;             /* Espacement autour du contenu */
+}
+
+.scroll-pane .thumb {
+    -fx-background-color: #4CAF50; /* Couleur verte pour la barre de défilement */
+}
+
+.scroll-pane .arrow-button {
+    -fx-background-color: #4CAF50; /* Couleur verte pour les boutons de direction */
+}

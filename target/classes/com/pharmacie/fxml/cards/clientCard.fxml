@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="card" prefWidth="412.0" stylesheets="@../../CSS/card.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.cards.ClientCard">
+   <children>
+      <Label fx:id="nameLabel" maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="191.0" text="Nom" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="contactLabel" maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="193.0" text="Contact" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+   </children>
+   <styleClass>
+      <String fx:value="card" />
+      <String fx:value="small" />
+   </styleClass>
+</HBox>

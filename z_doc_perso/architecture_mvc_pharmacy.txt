@@ -1,0 +1,65 @@
+pharmacy-management/                # Nom du projet Maven
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   ├── pharmacy/
+│   │   │   │   │   ├── controller/         # Contrôleurs (gestion des interactions)
+│   │   │   │   │   │   ├── LoginController.java
+│   │   │   │   │   │   ├── MedicineController.java
+│   │   │   │   │   │   ├── SalesController.java
+│   │   │   │   │   │   └── UserController.java
+│   │   │   │   │   ├── model/              # Modèles (représentation des données)
+│   │   │   │   │   │   ├── Medicine.java
+│   │   │   │   │   │   ├── User.java
+│   │   │   │   │   │   ├── Sale.java
+│   │   │   │   │   │   └── Supplier.java
+│   │   │   │   │   ├── repository/         # Requêtes vers la base de données
+│   │   │   │   │   │   ├── MedicineRepository.java
+│   │   │   │   │   │   ├── UserRepository.java
+│   │   │   │   │   │   └── SaleRepository.java
+│   │   │   │   │   ├── service/            # Logique métier
+│   │   │   │   │   │   ├── MedicineService.java
+│   │   │   │   │   │   ├── UserService.java
+│   │   │   │   │   │   └── SaleService.java
+│   │   │   │   │   └── util/               # Classes utilitaires
+│   │   │   │   │       ├── HibernateUtil.java
+│   │   │   │   │       └── Validator.java
+│   │   │   ├── module-info.java            # Module JavaFX (si nécessaire)
+│   │   ├── resources/
+│   │   │   ├── fxml/                       # Fichiers de vue JavaFX
+│   │   │   │   ├── LoginView.fxml
+│   │   │   │   ├── DashboardView.fxml
+│   │   │   │   ├── MedicineView.fxml
+│   │   │   │   └── SalesView.fxml
+│   │   │   ├── css/                        # Styles CSS pour JavaFX
+│   │   │   │   └── styles.css
+│   │   │   └── images/                     # Ressources visuelles
+│   │       └── database/                   # Scripts ou fichiers de configuration de la base
+│   │           └── schema.sql
+│   ├── test/                               # Tests unitaires et d'intégration
+│   │   └── java/
+│   │       ├── com/
+│   │           └── pharmacy/
+│   │               ├── controller/
+│   │               ├── model/
+│   │               └── service/
+├── pom.xml                                # Configuration Maven
+├── README.md                              # Documentation du projet
+└── .gitignore                             # Fichiers à ignorer par Git
+
+### Commandes Maven utiles :
+- **Compiler le projet :**  
+  mvn compile
+
+- **Exécuter l'application :**  
+  mvn javafx:run
+
+- **Créer un package (JAR) :**  
+  mvn package
+
+
+
+
+
+

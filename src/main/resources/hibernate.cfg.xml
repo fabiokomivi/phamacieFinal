@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Connexion à la base de données -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/pharmacie</property>
+        <property name="hibernate.connection.username">fabio</property>
+        <property name="hibernate.connection.password">fabio2002</property>
+
+        <!-- Gestion automatique des tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Gestion de la session -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Performances -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+
+        <!-- Mappings des entités -->
+        <mapping class="com.pharmacie.models.Client"/>
+        <mapping class="com.pharmacie.models.Role"/>
+        <mapping class="com.pharmacie.models.User"/>
+        <mapping class="com.pharmacie.models.Medicine"/>
+        <mapping class="com.pharmacie.models.Purchase"/>
+        <mapping class="com.pharmacie.models.MedicinePurchase"/>
+        <mapping class="com.pharmacie.models.Stock"/>
+        <mapping class="com.pharmacie.models.Supplier"/>
+        <mapping class="com.pharmacie.models.Category"/>
+        <mapping class="com.pharmacie.models.SupplierCategory"/>
+        <mapping class="com.pharmacie.models.Login"/>
+        <mapping class="com.pharmacie.models.PaymentMode"/>
+    </session-factory>
+</hibernate-configuration>

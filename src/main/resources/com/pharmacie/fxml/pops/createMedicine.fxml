@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="721.0" spacing="10.0" styleClass="round" stylesheets="@../../CSS/createUpdate.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.pops.CreateMedicine">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="330.0">
+         <children>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="246.0" text="Produit" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#onClose" prefHeight="25.0" prefWidth="25.0" styleClass="close">
+               <graphic>
+                  <SVGPath content="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16">
+                     <styleClass>
+                        <String fx:value="svg-path" />
+                        <String fx:value="svg-white" />
+                     </styleClass>
+                  </SVGPath>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <StackPane prefHeight="253.0" prefWidth="262.0">
+               <children>
+                  <VBox prefHeight="233.0" prefWidth="279.0" spacing="20.0">
+                     <children>
+                        <VBox prefWidth="308.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="308.0" text="nom du produit" />
+                              <TextField fx:id="medicineName" prefHeight="30.0" prefWidth="310.0" styleClass="textfield" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="308.0" text="prix" />
+                              <TextField fx:id="medicinePrice" prefHeight="30.0" prefWidth="310.0" styleClass="textfield" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="308.0" text="seuil" />
+                              <TextField fx:id="medicineThreshold" prefHeight="30.0" prefWidth="310.0" styleClass="textfield" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </StackPane>
+            <VBox prefHeight="253.0" prefWidth="137.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" prefHeight="16.0" prefWidth="325.0" text="categories">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fitToWidth="true" prefHeight="233.0" prefWidth="233.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="categoriesBox" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefHeight="229.0" prefWidth="234.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="253.0" prefWidth="137.0" spacing="10.0">
+               <children>
+                  <StackPane style="-fx-border-color: green;">
+                     <children>
+                        <ImageView fx:id="medicineImage" fitHeight="150.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </StackPane>
+                  <Button mnemonicParsing="false" onAction="#importImage" styleClass="action-button" text="importer" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#onValidate" prefHeight="24.0" prefWidth="186.0" styleClass="action-button" text="valider">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
+   </children>
+</VBox>

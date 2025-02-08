@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane styleClass="bg" stylesheets="@../../CSS/log.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.authentify.SignUp">
+   <children>
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" styleClass="main" stylesheets="@../../CSS/log.css">
+         <children>
+            <BorderPane minHeight="400.0" minWidth="600.0" prefHeight="300.0" prefWidth="300.0" styleClass="main">
+               <left>
+                  <AnchorPane prefHeight="480.0" prefWidth="343.0" BorderPane.alignment="CENTER">
+                     <styleClass>
+                        <String fx:value="content" />
+                        <String fx:value="content-left" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="418.0" fitWidth="285.0" layoutX="26.0" layoutY="34.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../images/pngwing.com.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <right>
+                  <AnchorPane prefHeight="480.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+                     <styleClass>
+                        <String fx:value="content" />
+                        <String fx:value="content-right" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="102.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/person_add_300dp_007A00_FILL0_wght700_GRAD0_opsz48.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#097909" layoutX="85.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscrivez-vous" textAlignment="CENTER" wrappingWidth="161.7294921875">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="namePF" layoutX="37.0" layoutY="147.0" prefHeight="33.0" prefWidth="243.0" promptText="Nom" styleClass="textfield" stylesheets="@../../CSS/log.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="prenamePF" layoutX="36.0" layoutY="201.0" prefHeight="33.0" prefWidth="270.0" promptText="Prenom" styleClass="textfield" stylesheets="@../../CSS/log.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="emailPF" layoutX="37.0" layoutY="252.0" prefHeight="33.0" prefWidth="267.0" promptText="Email" styleClass="textfield" stylesheets="@../../CSS/log.css">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="passwordPF" layoutX="37.0" layoutY="301.0" prefHeight="26.0" prefWidth="244.0" promptText="Mot de passe" styleClass="textfield">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <PasswordField fx:id="confirmPasswordPF" layoutX="37.0" layoutY="351.0" prefHeight="26.0" prefWidth="244.0" promptText="Confirmer" styleClass="textfield">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <Button layoutX="110.0" layoutY="420.0" mnemonicParsing="false" onAction="#onSignUp" prefHeight="36.0" prefWidth="114.0" styleClass="submit-button" text="S'inscrire" textAlignment="CENTER" />
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="259.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/person_200dp_007A00_FILL0_wght700_GRAD0_opsz48.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="259.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/email.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="259.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/key.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </right>
+            </BorderPane>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</StackPane>

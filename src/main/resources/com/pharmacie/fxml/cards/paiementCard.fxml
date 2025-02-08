@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="card" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="15.0" styleClass="card" stylesheets="@../../CSS/card.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.cards.PaymentCard">
+   <children>
+      <ImageView fx:id="paymentImage" fitHeight="187.0" fitWidth="196.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/payment.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="name" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="187.0" text="Orange money">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+</VBox>

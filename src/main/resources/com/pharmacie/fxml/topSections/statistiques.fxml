@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="860.0" stylesheets="@../../CSS/dashbord.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.topSections.Statistique">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <Label maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="663.0" style="-fx-font-weight: bold;" styleClass="title" text="Statistiques" textFill="#8fc886">
+               <font>
+                  <Font size="33.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <HBox prefHeight="404.0" prefWidth="860.0" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="404.0" prefWidth="284.0" styleClass="graphic-anchor">
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" text="stocks critiques">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <HBox prefWidth="200.0">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="bar-title" text="nom" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="4.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="16.0" prefWidth="70.0" styleClass="bar-title" text="seuil">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefWidth="70.0" styleClass="bar-title" text="quantité">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                           <content>
+                              <VBox fx:id="criticStockBox" prefHeight="200.0" prefWidth="100.0" spacing="2.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox styleClass="graphic-anchor">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="bar-title" text="ventes">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <StackedBarChart fx:id="salesBar">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </StackedBarChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox styleClass="graphic-anchor">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="bar-title" text="commandes">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <AreaChart fx:id="purchaseArea">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </AreaChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="graphic-anchor">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="108.0" prefWidth="90.0">
+                                             <graphic>
+                                                <SVGPath content="M17 18C17 18.5523 17.4477 19 18 19C18.5523 19 19 18.5523 19 18C19 17.4477 18.5523 17 18 17C17.4477 17 17 17.4477 17 18Z M11 18C11 18.5523 11.4477 19 12 19C12.5523 19 13 18.5523 13 18C13 17.4477 12.5523 17 12 17C11.4477 17 11 17.4477 11 18Z M5 18C5 18.5523 5.44772 19 6 19C6.55228 19 7 18.5523 7 18C7 17.4477 6.55228 17 6 17C5.44772 17 5 17.4477 5 18Z M17 12C17 12.5523 17.4477 13 18 13C18.5523 13 19 12.5523 19 12C19 11.4477 18.5523 11 18 11C17.4477 11 17 11.4477 17 12Z M11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z M5 12C5 12.5523 5.44772 13 6 13C6.55228 13 7 12.5523 7 12C7 11.4477 6.55228 11 6 11C5.44772 11 5 11.4477 5 12Z M17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5C17.4477 5 17 5.44772 17 6Z M11 6C11 6.55228 11.4477 7 12 7C12.5523 7 13 6.55228 13 6C13 5.44772 12.5523 5 12 5C11.4477 5 11 5.44772 11 6Z M5 6C5 6.55228 5.44772 7 6 7C6.55228 7 7 6.55228 7 6C7 5.44772 6.55228 5 6 5C5.44772 5 5 5.44772 5 6Z">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-black" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                          </Label>
+                                          <Label fx:id="categoryNumber" alignment="CENTER" prefHeight="61.0" prefWidth="95.0" styleClass="bar-title" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </StackPane>
+                              <Pane prefHeight="100.0" prefWidth="21.0" HBox.hgrow="ALWAYS" />
+                              <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="graphic-anchor">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="108.0" prefWidth="90.0">
+                                             <graphic>
+                                                <SVGPath content="M21 19.9999C21 18.2583 19.3304 16.7767 17 16.2275M15 20C15 17.7909 12.3137 16 9 16C5.68629 16 3 17.7909 3 20M15 13C17.2091 13 19 11.2091 19 9C19 6.79086 17.2091 5 15 5M9 13C6.79086 13 5 11.2091 5 9C5 6.79086 6.79086 5 9 5C11.2091 5 13 6.79086 13 9C13 11.2091 11.2091 13 9 13Z">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-black" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                          </Label>
+                                          <Label fx:id="supplierNumber" alignment="CENTER" prefHeight="61.0" prefWidth="95.0" styleClass="bar-title" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </StackPane>
+                              <Pane prefHeight="100.0" prefWidth="28.0" HBox.hgrow="ALWAYS" />
+                              <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="graphic-anchor">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="108.0" prefWidth="90.0">
+                                             <graphic>
+                                                <SVGPath content="M12.7435 8.82073L7.00896 11.3939C4.20961 12.65 2.95858 15.9376 4.2147 18.737C5.47081 21.5363 8.75841 22.7874 11.5578 21.5312L17.2923 18.9581M12.7435 8.82073L18.478 6.24754C21.2774 4.99143 24.565 6.24246 25.8211 9.0418C27.0772 11.8411 25.8262 15.1287 23.0268 16.3849L17.2923 18.9581M12.7435 8.82073L17.2923 18.9581">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-black" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                          </Label>
+                                          <Label fx:id="medicineNumber" alignment="CENTER" prefHeight="61.0" prefWidth="95.0" styleClass="bar-title" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </StackPane>
+                              <Pane prefHeight="100.0" prefWidth="28.0" HBox.hgrow="ALWAYS" />
+                              <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="graphic-anchor">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="108.0" prefWidth="90.0">
+                                             <graphic>
+                                                <SVGPath content="M20 21C20 18.2386 16.4183 16 12 16C7.58172 16 4 18.2386 4 21M12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13Z">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-black" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                          </Label>
+                                          <Label fx:id="userNumber" alignment="CENTER" prefHeight="61.0" prefWidth="95.0" styleClass="bar-title" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </StackPane>
+                              <Pane prefHeight="100.0" prefWidth="28.0" HBox.hgrow="ALWAYS" />
+                              <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" styleClass="graphic-anchor">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="108.0" prefWidth="90.0">
+                                             <graphic>
+                                                <SVGPath content="M3 11V15.8002C3 16.9203 3 17.4801 3.21799 17.9079C3.40973 18.2842 3.71547 18.5905 4.0918 18.7822C4.5192 19 5.07899 19 6.19691 19H17.8031C18.921 19 19.48 19 19.9074 18.7822C20.2837 18.5905 20.5905 18.2842 20.7822 17.9079C21 17.4805 21 16.9215 21 15.8036V11M3 11V9M3 11H21M3 9V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V9M3 9H21M7 15H11M21 11V9">
+                                                   <styleClass>
+                                                      <String fx:value="svg-path" />
+                                                      <String fx:value="svg-black" />
+                                                   </styleClass>
+                                                </SVGPath>
+                                             </graphic>
+                                          </Label>
+                                          <Label fx:id="paymentNumber" alignment="CENTER" prefHeight="61.0" prefWidth="95.0" styleClass="bar-title" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </StackPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets bottom="2.0" left="4.0" right="4.0" top="2.0" />
+   </padding>
+   <children>
+      <Label fx:id="name" prefHeight="175.0" prefWidth="178.0" text="analgesique" />
+      <Label fx:id="description" maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="293.0" text="attenues les douleurs excessives" HBox.hgrow="ALWAYS" />
+   </children>
+</HBox>

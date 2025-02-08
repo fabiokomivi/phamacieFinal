@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="388.0" spacing="10.0" styleClass="round" stylesheets="@../../CSS/createUpdate.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.pops.CreateUser">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="330.0">
+         <children>
+            <Label fx:id="title" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="16.0" prefWidth="246.0" text="utilisateur" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#onClose" prefHeight="25.0" prefWidth="25.0" styleClass="close">
+               <graphic>
+                  <SVGPath content="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16">
+                     <styleClass>
+                        <String fx:value="svg-path" />
+                        <String fx:value="svg-white" />
+                     </styleClass>
+                  </SVGPath>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="7.0">
+         <children>
+            <StackPane prefHeight="253.0" prefWidth="328.0">
+               <children>
+                  <VBox prefHeight="233.0" prefWidth="271.0" spacing="20.0">
+                     <children>
+                        <VBox prefWidth="308.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="308.0" text="nom de l'utilisateur" />
+                              <TextField fx:id="fullName" prefHeight="30.0" prefWidth="310.0" styleClass="textfield" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="308.0" text="email" />
+                              <TextField fx:id="email" prefHeight="30.0" prefWidth="310.0" styleClass="textfield" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="308.0" text="contact" />
+                              <TextField fx:id="contact" prefHeight="30.0" prefWidth="310.0" styleClass="textfield" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="rootBox">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="308.0" text="role" />
+                              <HBox alignment="CENTER" spacing="50.0">
+                                 <children>
+                                    <HBox fx:id="adminRole">
+                                       <children>
+                                          <Label text="Adminstrateur" />
+                                          <CheckBox fx:id="adminCheck" mnemonicParsing="false" />
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="eployeRole">
+                                       <children>
+                                          <Label text="Employé" />
+                                          <CheckBox fx:id="employeCheck" mnemonicParsing="false" selected="true" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="3.0" top="3.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </StackPane>
+         </children>
+      </HBox>
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#onValidate" prefHeight="24.0" prefWidth="186.0" styleClass="action-button" text="valider">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Button>
+   </children>
+</VBox>

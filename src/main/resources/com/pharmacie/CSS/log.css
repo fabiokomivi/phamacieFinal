@@ -1,0 +1,103 @@
+.bg {
+    -fx-background-color: #097909;
+}
+
+.main {
+    -fx-background-color: white;
+    -fx-padding: 5px;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+
+.content {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+
+.content-left {
+    -fx-background-color: #94d494;
+}
+
+.content-right {
+    -fx-background-color: white;
+}
+
+.textfield {
+    -fx-background-color: transparent;
+    -fx-alignment: center_left;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #097909;
+    -fx-pref-width: 220px;
+    -fx-font-weight: bold;
+}
+
+.textfield-recup {
+    -fx-background-color: transparent;
+    -fx-alignment: center_left;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #097909;
+    -fx-pref-width: 270px;
+}
+
+.submit-button {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #097909;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-text-fill: #097909;
+    -fx-font-weight: bold;
+
+}
+
+.submit-button:hover {
+    -fx-background-color: #097909; /* Bleu foncé */
+    -fx-cursor: hand; /* Change le curseur en main */
+    -fx-text-fill: white;
+
+}
+
+/* Style lorsque le bouton est enfoncé (pressed) */
+.submit-button:pressed {
+    -fx-background-color: #097909; /* Bleu foncé */
+    -fx-border-color: #097909; /* Bordure encore plus foncée */
+    -fx-text-fill: white;
+}
+.hyperlink {
+    -fx-font-size: 14px;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #097909;
+    -fx-underline: true;
+}
+
+
+.round {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-background-color: white;
+    -fx-padding: 6px 6px 6px 6px;
+    -fx-border-color: #097909;
+    -fx-border-width: 2;
+}
+
+.scroll-pane {
+    -fx-background-color: #f4f7f6;  /* Fond légèrement gris clair */
+    
+    -fx-border-width: 2px;         /* Largeur de la bordure */
+    -fx-border-radius: 10px;       /* Coins arrondis */
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #ffffff; /* Fond blanc pour la zone de contenu */
+    -fx-background-insets: 0;      /* Suppression des marges */
+}
+
+.scroll-pane .thumb {
+    -fx-background-color: #4CAF50; /* Couleur verte pour la barre de défilement */
+}
+
+.scroll-pane .arrow-button {
+    -fx-background-color: #4CAF50; /* Couleur verte pour les boutons de direction */
+}

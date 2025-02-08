@@ -1,0 +1,157 @@
+.topbar {
+    -fx-background-color: #8fc886;
+}
+
+.svg-path {
+    -fx-fill: transparent;
+    -fx-stroke-width: 2px;         /* Épaisseur du contour */
+    -fx-stroke-linecap: round;     /* Style de l'extrémité du contour */
+    -fx-stroke-linejoin: round;    /* Style de l'angle du contour */
+    -fx-scale-x: 1.5; /* Échelle horizontale */
+    -fx-scale-y: 1.5; /* Échelle verticale */
+}
+
+.svg-white {
+    -fx-stroke: white; 
+}
+
+.svg-green {
+    -fx-stroke: green; 
+}
+
+.svg-red {
+    -fx-stroke: rgb(184, 10, 10); 
+}
+
+.svg-black {
+    -fx-stroke: black; 
+}
+
+/* Style général du DatePicker */
+.date-picker {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-border-color:  #8fc886;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-radius: 0px;
+}
+
+/* Style du popup du calendrier */
+.date-picker-popup {
+    -fx-background-color:  #8fc886;
+    -fx-border-color:  #8fc886;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+}
+
+/* Style des jours dans le calendrier */
+.date-cell {
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+}
+
+.date-cell:hover {
+}
+
+/* Style pour les jours sélectionnés */
+.date-cell:selected {
+    -fx-background-color:  #8fc886;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+/* Style des jours désactivés */
+.date-cell:disabled {
+    -fx-text-fill: #cccccc;
+    -fx-background-color: transparent;
+}
+
+/* Boutons de navigation (précédent/suivant) */
+.arrow-button {
+    -fx-background-color:  #8fc886;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-border-radius: 3px;
+}
+
+.name {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.email {
+    -fx-font-weight: normal;
+    -fx-font-size: 13px;
+    -fx-text-fill:#524f4f
+}
+
+.selection-label {
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+    -fx-text-fill:#000000
+}
+
+.bienvenu {
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+    -fx-text-fill:#524f4f
+}
+
+.bar-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-text-fill:#000000
+}
+
+
+.graphic-anchor {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-background-color: #8fc886;
+}
+
+/* Appliquer un dégradé sur les barres */
+.chart-bar {
+    -fx-background-color: transparent; /* Supprime l'arrière-plan */
+    }
+
+.data0.chart-bar, 
+.data1.chart-bar, 
+.data2.chart-bar, 
+.data3.chart-bar, 
+.data4.chart-bar, 
+.data5.chart-bar,
+.data6.chart-bar {
+    -fx-background-color: linear-gradient(to top, #8fc886, #ff0000);
+    -fx-bar-width: 15px;
+    -fx-background-radius: 3px 3px 0px 0px;
+}
+
+.chart-legend {
+    -fx-padding: 0;
+    -fx-opacity: 0; /* Rend la légende invisible */
+    -fx-min-height: 0;
+    -fx-max-height: 0;
+}
+
+.scroll-pane {
+    -fx-background-color: #f4f7f6;  /* Fond légèrement gris clair */
+    
+    -fx-border-width: 2px;         /* Largeur de la bordure */
+    -fx-border-radius: 10px;       /* Coins arrondis */
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #ffffff; /* Fond blanc pour la zone de contenu */
+    -fx-background-insets: 0;      /* Suppression des marges */
+}
+
+.scroll-pane .thumb {
+    -fx-background-color: #4CAF50; /* Couleur verte pour la barre de défilement */
+}
+
+.scroll-pane .arrow-button {
+    -fx-background-color: #4CAF50; /* Couleur verte pour les boutons de direction */
+}

@@ -1,0 +1,230 @@
+Voici comment intégrer une gestion de photo pour la table Supplier dans votre application. L'idée est de stocker uniquement le chemin de la photo dans la base de données, tout en permettant l'enregistrement, la récupération et l'affichage de la photo via JavaFX.
+1. Modification de l'entité Supplier
+
+Ajoutez un champ pour le chemin de la photo dans l'entité Supplier.
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "suppliers")
+public class Supplier {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private String email;
+
+    @Column
+    private String photoPath; // Champ pour le chemin de la photo
+
+    // Getters et setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhotoPath() {
+        return photoPath;
+    }
+
+    public void setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
+    }
+}
+
+2. DAO pour gérer Supplier
+
+Ajoutez les méthodes pour enregistrer et récupérer les fournisseurs, y compris leur photo.
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+public class SupplierDAO {
+
+    public void saveSupplier(Supplier supplier) {
+        Transaction transaction = null;
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            transaction = session.beginTransaction();
+            session.save(supplier);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
+    }
+
+    public Supplier getSupplierById(Long id) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            return session.get(Supplier.class, id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
+
+3. Service pour gérer les photos des fournisseurs
+
+Ajoutez un service pour gérer l'upload et la récupération des photos.
+
+import java.io.File;
+
+public class SupplierService {
+
+    private final SupplierDAO supplierDAO = new SupplierDAO();
+
+    public void uploadPhotoForSupplier(Long supplierId, String filePath) {
+        // Vérifiez si le fichier existe
+        File file = new File(filePath);
+        if (!file.exists()) {
+            throw new IllegalArgumentException("Le fichier n'existe pas : " + filePath);
+        }
+
+        // Récupérez le fournisseur
+        Supplier supplier = supplierDAO.getSupplierById(supplierId);
+        if (supplier == null) {
+            throw new IllegalArgumentException("Fournisseur introuvable pour l'ID : " + supplierId);
+        }
+
+        // Mettez à jour le chemin de la photo
+        supplier.setPhotoPath(filePath);
+        supplierDAO.saveSupplier(supplier);
+
+        System.out.println("Photo mise à jour avec succès !");
+    }
+
+    public String getPhotoPath(Long supplierId) {
+        Supplier supplier = supplierDAO.getSupplierById(supplierId);
+        if (supplier != null) {
+            return supplier.getPhotoPath();
+        } else {
+            throw new IllegalArgumentException("Fournisseur introuvable pour l'ID : " + supplierId);
+        }
+    }
+}
+
+4. Affichage de la photo dans un ImageView
+
+Utilisez ImageView pour afficher la photo d'un fournisseur.
+
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+public class SupplierPhotoViewer {
+
+    private final SupplierService supplierService = new SupplierService();
+
+    public void displayPhoto(ImageView imageView, Long supplierId) {
+        try {
+            String filePath = supplierService.getPhotoPath(supplierId);
+            File file = new File(filePath);
+            if (file.exists()) {
+                Image image = new Image(file.toURI().toString());
+                imageView.setImage(image);
+            } else {
+                System.out.println("Le fichier n'existe pas : " + filePath);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+5. Uploader une photo via FileChooser
+
+Ajoutez une fonctionnalité pour permettre à l'utilisateur de sélectionner une photo.
+
+import javafx.stage.FileChooser;
+
+public class SupplierPhotoUploader {
+
+    private final SupplierService supplierService = new SupplierService();
+
+    public void uploadPhoto(Long supplierId) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Sélectionnez une photo");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Images", "*.jpg", "*.jpeg", "*.png", "*.bmp")
+        );
+        File selectedFile = fileChooser.showOpenDialog(null);
+
+        if (selectedFile != null) {
+            String filePath = selectedFile.getAbsolutePath();
+            supplierService.uploadPhotoForSupplier(supplierId, filePath);
+        } else {
+            System.out.println("Aucun fichier sélectionné.");
+        }
+    }
+}
+
+6. Contrôleur pour l'intégration avec JavaFX
+
+Ajoutez un contrôleur pour lier les fonctionnalités avec le FXML.
+
+import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
+
+public class SupplierController {
+
+    @FXML
+    private ImageView imageView;
+
+    private final SupplierPhotoUploader photoUploader = new SupplierPhotoUploader();
+    private final SupplierPhotoViewer photoViewer = new SupplierPhotoViewer();
+
+    @FXML
+    public void uploadPhoto() {
+        photoUploader.uploadPhoto(1L); // Exemple : Fournisseur avec ID = 1
+    }
+
+    @FXML
+    public void displayPhoto() {
+        photoViewer.displayPhoto(imageView, 1L); // Exemple : Fournisseur avec ID = 1
+    }
+}
+
+7. FXML Exemple
+
+Créez un fichier FXML pour afficher et uploader la photo.
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.SupplierController">
+    <ImageView fx:id="imageView" fitWidth="400" fitHeight="300" />
+    <Button text="Uploader une photo" onAction="#uploadPhoto" />
+    <Button text="Afficher la photo" onAction="#displayPhoto" />
+</VBox>
+
+Résultat attendu :
+
+    Bouton "Uploader une photo" : Permet de sélectionner une photo via un explorateur de fichiers et de l'associer au fournisseur.
+    Bouton "Afficher la photo" : Affiche la photo associée dans l'ImageView.
+
+Assurez-vous de tester avec des chemins valides et des fichiers existants.
+
+
+ChatGPT peut faire des erreurs. Envisagez de vérifier les informations importantes.

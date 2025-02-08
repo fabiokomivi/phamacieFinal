@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="card" maxWidth="1.7976931348623157E308" prefHeight="4.0" prefWidth="422.0" stylesheets="@../../CSS/card.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.FxControllers.cards.MedicinePurchasedCard">
+   <children>
+      <Label fx:id="medicineName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="178.0" text="nom" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets left="3.0" />
+         </padding></Label>
+      <Label fx:id="medicinePrice" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="132.0" text="prix" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets left="3.0" />
+         </padding></Label>
+      <Label fx:id="medicineQuantity" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="118.0" text="quantite" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets left="3.0" />
+         </padding></Label>
+   </children>
+   <styleClass>
+      <String fx:value="card" />
+      <String fx:value="small" />
+   </styleClass>
+</HBox>
