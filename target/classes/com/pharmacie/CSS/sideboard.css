@@ -35,9 +35,11 @@
     -fx-width: 50px;
     -fx-height: 50px;
     -fx-background-color: transparent;
-    -fx-border-radius: 50%;
     -fx-box-shadow: 35px 35px 0 10px white;
     -fx-pointer-events: none;
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-border-width: 0px 0px 0px 5px;
+    -fx-border-color: rgb(0, 0, 0);
 }
 
 .svg-path {

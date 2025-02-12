@@ -20,7 +20,7 @@
                      </graphic>
                      <styleClass>
                         <String fx:value="nav-button" />
-                        <String fx:value="selected" />
+                        <String fx:value="select" />
                      </styleClass></Button>
                   <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onField" prefHeight="43.0" prefWidth="160.0" styleClass="nav-button" text="  fournisseurs" HBox.hgrow="ALWAYS">
                      <graphic>

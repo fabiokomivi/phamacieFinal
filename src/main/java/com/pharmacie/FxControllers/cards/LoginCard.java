@@ -23,7 +23,7 @@ public class LoginCard {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
 
         start.setText(login.getStartedAt().format(formatter));
-        end.setText((login.getEndedAt() == null)?"en cours" : login.getStartedAt().format(formatter));        
+        end.setText((login.getEndedAt() == null)?"en cours" : login.getEndedAt().format(formatter));        
     }
 
     public void toggle() {

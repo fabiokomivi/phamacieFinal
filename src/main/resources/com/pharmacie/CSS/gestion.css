@@ -8,7 +8,7 @@
     -fx-width: 140px
 }
 
-.selected {
+.select {
     -fx-border-width: 0px 0px 5px 0px;
     -fx-border-color: rgb(0, 0, 0);
     -fx-text-fill: rgb(0, 0, 0);
@@ -34,7 +34,7 @@
     -fx-scale-y: 0.5; /* Échelle verticale */
 }
 
-.selected .svg-path {
+.select .svg-path {
     -fx-stroke: rgb(0, 0, 0);
 }
 

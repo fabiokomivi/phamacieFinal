@@ -88,13 +88,10 @@ public class LogIn {
                 Dialogs.showSimpleMessage("mot de passe incorrect");
             }
             else {
-                SessionUtil.setCurrentUser(user);
 
                 Login login = new Login(user);
                 loginController.addLogin(login);
-                SessionUtil.setCurrentLogin(login);
 
-                //simulation de deconnexion
                 SessionUtil.setCurrentUser(user);
                 SessionUtil.setCurrentLogin(login);
 

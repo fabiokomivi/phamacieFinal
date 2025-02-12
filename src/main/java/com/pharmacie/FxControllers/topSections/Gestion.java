@@ -78,12 +78,12 @@ public class Gestion implements Initializable{
             .filter(node -> node instanceof Button)
             .map(node -> (Button) node)
             .forEach(button -> {
-                button.getStyleClass().removeAll("selected");
+                button.getStyleClass().removeAll("select");
                 //button.getStyleClass().add("up"); // Réappliquer le style par défaut
             });
     
         // Appliquer le style "selected" au bouton cliqué
-        clickedButton.getStyleClass().add("selected");
+        clickedButton.getStyleClass().add("select");
     }
 
     private void showPage(String pageKey) {
